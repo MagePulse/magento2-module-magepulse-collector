@@ -1,0 +1,21 @@
+{
+    "name": "magepulse/magento2-module-collector",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "magepulse/magento2-module-core": "^1"
+    },
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagePulse\\Collector\\": ""
+        }
+    }
+}
