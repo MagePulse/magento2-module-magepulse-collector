@@ -26,7 +26,7 @@
             <resource>MagePulse_Collector::config</resource>
             <group id="hint" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1"
                    showInStore="1">
-                <frontend_model>MagePulse\Core\Block\System\Config\Form\Fieldset\Hint</frontend_model>
+                <frontend_model>MagePulse\Collector\Block\System\Config\Form\Fieldset\Hint</frontend_model>
             </group>
             <group id="general" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1">
                 <label><![CDATA[General]]></label>

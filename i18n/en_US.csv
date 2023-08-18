@@ -1,7 +1,8 @@
 "Collector pool %s doesn't exist","Collector pool %s doesn't exist"
-"Central Reporting","Central Reporting"
+Collector,Collector
 General,General
-"Enable Central Reporting","Enable Central Reporting"
+"Enable Collector","Enable Collector"
+"No data will be sent to MagePulse if the collector is disabled.","No data will be sent to MagePulse if the collector is disabled."
 "Site License","Site License"
 "Enter your site license from domainname.com.","Enter your site license from domainname.com."
 "Public Key","Public Key"
