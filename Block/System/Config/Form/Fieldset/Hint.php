@@ -22,7 +22,7 @@ use MagePulse\Core\Block\System\Config\Form\Fieldset\AbstractHint;
 
 class Hint extends AbstractHint
 {
-    protected $moduleCode = 'MagePulse_Collector';
+    protected string $moduleCode = 'MagePulse_Collector';
 
-    protected $moduleName = 'MagePulse Collector';
+    protected string $moduleName = 'MagePulse Collector';
 }
