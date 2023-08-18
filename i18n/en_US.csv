@@ -1,0 +1,8 @@
+"Collector pool %s doesn't exist","Collector pool %s doesn't exist"
+"Central Reporting","Central Reporting"
+General,General
+"Enable Central Reporting","Enable Central Reporting"
+"Site License","Site License"
+"Enter your site license from domainname.com.","Enter your site license from domainname.com."
+"Public Key","Public Key"
+"This Public Key needs to be added to domainname.com so that we can decrypt your data.","This Public Key needs to be added to domainname.com so that we can decrypt your data."

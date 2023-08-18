@@ -5,7 +5,7 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
-        "magepulse/magento2-module-core": "^1"
+        "magepulse/magento2-module-core": "dev-main"
     },
     "license": [
         "Proprietary"
