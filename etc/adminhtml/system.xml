@@ -1,23 +1,47 @@
 <?xml version="1.0"?>
+<!--
+  ~ MagePulse
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the MagePulse Proprietary EULA
+  ~ that is bundled with this package in the file LICENSE.
+  ~ It is also available through the world-wide-web at this URL:
+  ~ https://magepulse.com/legal/magento-license/
+  ~
+  ~ @category    MagePulse
+  ~ @package     MagePulse_Collector
+  ~ @copyright   Copyright (c) MagePulse (https://magepulse.com)
+  ~ @license     https://magepulse.com/legal/magento-license/  MagePulse Proprietary EULA
+  ~
+  -->
+
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="magepulse_central_reporting" translate="label" sortOrder="160" showInDefault="1">
+        <section id="magepulse_collector" translate="label" sortOrder="160" showInDefault="1">
             <class>separator-top</class>
-            <label><![CDATA[Central Reporting]]></label>
+            <label><![CDATA[Collector]]></label>
             <tab>magepulse</tab>
             <resource>MagePulse_Collector::config</resource>
+            <group id="hint" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <frontend_model>MagePulse\Core\Block\System\Config\Form\Fieldset\Hint</frontend_model>
+            </group>
             <group id="general" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1">
                 <label><![CDATA[General]]></label>
-                <field id="enabled" type="select" translate="label" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
-                    <label>Enable Central Reporting</label>
+                <field id="enabled" type="select" translate="label comment" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Collector</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[No data will be sent to MagePulse if the collector is disabled.]]>
+                    </comment>
                 </field>
                 <field id="site_license" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1">
                     <label>Site License</label>
                     <validate>required-entry validate-no-empty</validate>
                     <depends>
-                        <field id="magepulse_central_reporting/general/enabled">1</field>
+                        <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
                         <![CDATA[Enter your site license from domainname.com.]]>
@@ -26,9 +50,9 @@
                 <field id="public_key" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1">
                     <label>Public Key</label>
                     <attribute type="disabled" default="0">1</attribute>
-                    <config_path>magepulse_central_reporting/keys/public_key</config_path>
+                    <config_path>magepulse_collector/keys/public_key</config_path>
                     <depends>
-                        <field id="magepulse_central_reporting/general/enabled">1</field>
+                        <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
                         <![CDATA[This Public Key needs to be added to domainname.com so that we can decrypt your data.]]>
