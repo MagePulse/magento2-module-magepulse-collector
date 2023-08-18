@@ -1,0 +1,52 @@
+<?php
+
+namespace MagePulse\Collector\Controller\Retrieve;
+
+use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Exception\NotFoundException;
+use SodiumException;
+use MagePulse\Collector\Model\Collector;
+use MagePulse\Collector\Model\CollectorPool;
+use MagePulse\Collector\Model\ConfigProvider;
+use MagePulse\Collector\Model\Encryptor;
+
+class Index implements HttpGetActionInterface
+{
+    protected ResultFactory $resultFactory;
+    protected ConfigProvider $configProvider;
+    private Collector $collectorPool;
+    private Encryptor $encryptor;
+
+    public function __construct(
+        ResultFactory $resultFactory,
+        ConfigProvider $configProvider,
+        Collector $collectorPool,
+        Encryptor $encryptor
+    ) {
+        $this->resultFactory = $resultFactory;
+        $this->configProvider = $configProvider;
+        $this->collectorPool = $collectorPool;
+        $this->encryptor = $encryptor;
+    }
+
+    /**
+     * Execute action based on request and return result
+     * @throws NotFoundException
+     * @throws SodiumException
+     */
+    public function execute()
+    {
+        $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
+        /**
+        $data = [
+            'publicKey: ' => $this->configProvider->getPublicKey(),
+            'privateKey: ' => $this->configProvider->getPrivateKey()
+        ];
+         */
+        $data = $this->collectorPool->collect(CollectorPool::DEFAULT_SERVICE_GROUP);
+        $result->setData(['error' => false, 'data' => $data, 'encryptedData' => $this->encryptor->encrypt(json_encode($data))]);
+        $result->setHttpResponseCode(200);
+        return $result;
+    }
+}
