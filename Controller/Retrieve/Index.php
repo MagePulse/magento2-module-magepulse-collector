@@ -53,6 +53,13 @@ class Index implements HttpGetActionInterface
      */
     public function execute()
     {
+        // Check if the module is enabled
+        if ($this->configProvider->isEnabled() === false) {
+            $resultForward = $this->resultFactory->create(ResultFactory::TYPE_FORWARD);
+            $resultForward->forward('noroute');
+            return $resultForward;
+        }
+
         $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
         /**
         $data = [
