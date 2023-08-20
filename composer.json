@@ -1,16 +1,25 @@
 {
     "name": "magepulse/magento2-module-collector",
-    "version": "1.0.0",
-    "description": "N/A",
+    "description": "Magento 2 Plugin to send data to MagePulse.",
     "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Clive Walkden",
+            "email": "clive@magepulse.com",
+            "homepage": "https://magepulse.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@magepulse.com",
+        "source": "https://github.com/magepulse/magento2-module-magepulse-core"
+    },
+    "license": "proprietary",
     "require": {
         "magento/framework": "*",
-        "magepulse/magento2-module-core": "dev-main",
+        "magepulse/magento2-module-core": "^1.0",
         "ext-sodium": "*"
     },
-    "license": [
-        "Proprietary"
-    ],
     "autoload": {
         "files": [
             "registration.php"
