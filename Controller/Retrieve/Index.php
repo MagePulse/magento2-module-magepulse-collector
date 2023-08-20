@@ -67,8 +67,10 @@ class Index implements HttpGetActionInterface
             'privateKey: ' => $this->configProvider->getPrivateKey()
         ];
          */
+        $time_start = microtime(true);
         $data = $this->collectorPool->collect(CollectorPool::DEFAULT_SERVICE_GROUP);
-        $result->setData(['error' => false, 'data' => $data, 'encryptedData' => $this->encryptor->encrypt(json_encode($data))]);
+        $time_end = microtime(true);
+        $result->setData(['error' => false, 'data' => $data, 'encryptedData' => $this->encryptor->encrypt(json_encode($data)), 'executionTime' => $time_end - $time_start]);
         $result->setHttpResponseCode(200);
         return $result;
     }

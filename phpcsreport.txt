@@ -1,0 +1,151 @@
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Service/Key.php
+-------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+-------------------------------------------------------------------------------------------------------------------------
+ 25 | WARNING | Missing PHP DocBlock for class property.
+ 27 | WARNING | Missing short description
+ 28 | WARNING | There must be exactly one blank line before tags
+ 35 | WARNING | Missing short description
+ 36 | WARNING | There must be exactly one blank line before tags
+ 43 | WARNING | Missing short description
+ 44 | WARNING | There must be exactly one blank line before tags
+-------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Controller/Retrieve/Index.php
+---------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+---------------------------------------------------------------------------------------------------------------------------------------
+ 32 | WARNING | Missing PHP DocBlock for class property.
+ 33 | WARNING | Missing PHP DocBlock for class property.
+ 34 | WARNING | Missing PHP DocBlock for class property.
+ 35 | WARNING | Missing PHP DocBlock for class property.
+ 37 | WARNING | Comment block is missing
+ 51 | WARNING | There must be exactly one blank line before tags
+ 73 | WARNING | Line exceeds 120 characters; contains 172 characters
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Setup/Patch/Data/KeyCreation.php
+------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
+------------------------------------------------------------------------------------------------------------------------------------------
+ 39 | WARNING | Missing PHP DocBlock for class property.
+ 41 | WARNING | Missing PHP DocBlock for class property.
+ 42 | WARNING | Missing PHP DocBlock for class property.
+ 43 | WARNING | Missing PHP DocBlock for class property.
+ 95 | WARNING | Empty FUNCTION statement detected
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Block/System/Config/Form/Fieldset/Hint.php
+----------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ 25 | WARNING | Missing PHP DocBlock for class property.
+ 27 | WARNING | Missing PHP DocBlock for class property.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/Collectors/MagentoModel.php
+-------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------
+ 25 | WARNING | Missing PHP DocBlock for class property.
+ 27 | WARNING | Comment block is missing
+ 32 | WARNING | Comment block is missing
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/Collectors/CollectorInterface.php
+-------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
+-------------------------------------------------------------------------------------------------------------------------------------------------
+ 27 | WARNING | [ ] There must be exactly one blank line before tags
+ 27 | WARNING | [ ] Short description should not be in multi lines
+ 29 | WARNING | [x] Expected 0 spaces before semicolon; 1 found
+-------------------------------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/Collectors/PluginModel.php
+------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 12 WARNINGS AFFECTING 9 LINES
+------------------------------------------------------------------------------------------------------------------------------------------
+ 30 | WARNING | Missing PHP DocBlock for class property.
+ 31 | WARNING | Missing PHP DocBlock for class property.
+ 32 | WARNING | Missing PHP DocBlock for class property.
+ 33 | WARNING | Missing PHP DocBlock for class property.
+ 35 | WARNING | Comment block is missing
+ 47 | WARNING | Comment block is missing
+ 54 | WARNING | There must be exactly one blank line before tags
+ 54 | WARNING | Short description should not be in multi lines
+ 76 | WARNING | Type is not specified
+ 76 | WARNING | There must be exactly one blank line before tags
+ 91 | WARNING | Type is not specified
+ 91 | WARNING | There must be exactly one blank line before tags
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/ModuleMetaInfo.php
+----------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
+----------------------------------------------------------------------------------------------------------------------------------
+ 30 | WARNING | Missing PHP DocBlock for class property.
+ 31 | WARNING | Missing PHP DocBlock for class property.
+ 32 | WARNING | Missing PHP DocBlock for class property.
+ 33 | WARNING | Missing PHP DocBlock for class property.
+ 35 | WARNING | Comment block is missing
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/ConfigProvider.php
+----------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------------------------------------------
+ 30 | WARNING | Missing PHP DocBlock for class property.
+ 39 | WARNING | Missing PHP DocBlock for class property.
+ 41 | WARNING | Comment block is missing
+ 41 | WARNING | Line exceeds 120 characters; contains 130 characters
+ 47 | WARNING | Comment block is missing
+ 52 | WARNING | Comment block is missing
+ 57 | WARNING | Comment block is missing
+ 62 | WARNING | Comment block is missing
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/Encryptor.php
+-----------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+-----------------------------------------------------------------------------------------------------------------------------
+ 28 | WARNING | Missing PHP DocBlock for class property.
+ 30 | WARNING | Comment block is missing
+ 47 | WARNING | Missing short description
+ 48 | WARNING | There must be exactly one blank line before tags
+ 51 | WARNING | Missing @param for argument in method annotation
+ 64 | WARNING | Missing short description
+ 65 | WARNING | There must be exactly one blank line before tags
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/CollectorPool.php
+---------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------------------------------------
+ 35 | WARNING | Comment block is missing
+ 44 | WARNING | Type is not specified
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/clive/git/magento2/magento-docker/2.4.6-p1/magento/vendor/magepulse/magento2-module-collector/Model/Collector.php
+-----------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+-----------------------------------------------------------------------------------------------------------------------------
+ 27 | WARNING | Missing PHP DocBlock for class property.
+ 29 | WARNING | Comment block is missing
+-----------------------------------------------------------------------------------------------------------------------------
+
+Time: 1.73 secs; Memory: 18MB
+
