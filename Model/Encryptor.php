@@ -55,7 +55,9 @@ class Encryptor
         $cipherText = sodium_crypto_secretbox($message, $nonce, $key);
         sodium_memzero($key);
         sodium_memzero($message);
-        $result = sodium_bin2base64($nonce . $cipherText, SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING);
+
+        $result = sprintf('%s.%s', sodium_bin2hex($nonce), sodium_bin2hex($cipherText));
+
         sodium_memzero($nonce);
 
         return $result;
@@ -66,14 +68,9 @@ class Encryptor
      */
     private function generateKey(): string
     {
-        // Determine if there is a license installed yet
-        if (!$this->configProvider->getSiteLicense()) {
-            return sodium_base642bin($this->configProvider->getPrivateKey(), SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING);
-        }
-
         return sodium_crypto_box_keypair_from_secretkey_and_publickey(
-            sodium_base642bin($this->configProvider->getPrivateKey(), SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING),
-            sodium_base642bin($this->configProvider->getSiteLicense(), SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING)
+            sodium_hex2bin($this->configProvider->getPrivateKey()),
+            sodium_hex2bin($this->configProvider->getSiteLicense())
         );
     }
 

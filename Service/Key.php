@@ -37,7 +37,7 @@ class Key
      */
     public function getPublicKey(): string
     {
-        return sodium_bin2base64(sodium_crypto_box_publickey($this->keyPair), SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING);
+        return sodium_bin2hex(sodium_crypto_box_publickey($this->keyPair));
     }
 
     /**
@@ -45,6 +45,6 @@ class Key
      */
     public function getPrivateKey(): string
     {
-        return sodium_bin2base64(sodium_crypto_box_secretkey($this->keyPair), SODIUM_BASE64_VARIANT_URLSAFE_NO_PADDING);
+        return sodium_bin2hex(sodium_crypto_box_secretkey($this->keyPair));
     }
 }
