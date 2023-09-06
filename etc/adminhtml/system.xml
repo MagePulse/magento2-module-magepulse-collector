@@ -44,7 +44,7 @@
                         <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
-                        <![CDATA[Enter your site license from domainname.com.]]>
+                        <![CDATA[Enter your site License Key from your magepulse.com account.]]>
                     </comment>
                 </field>
                 <field id="public_key" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1">
@@ -55,7 +55,7 @@
                         <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
-                        <![CDATA[This Public Key needs to be added to domainname.com so that we can decrypt your data.]]>
+                        <![CDATA[This Public Key needs to be added to your magepulse.com account so that we can decrypt your data.]]>
                     </comment>
                 </field>
             </group>
