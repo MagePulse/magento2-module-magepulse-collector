@@ -4,6 +4,6 @@ General,General
 "Enable Collector","Enable Collector"
 "No data will be sent to MagePulse if the collector is disabled.","No data will be sent to MagePulse if the collector is disabled."
 "Site License","Site License"
-"Enter your site license from domainname.com.","Enter your site license from domainname.com."
+"Enter your site License Key from your magepulse.com account.","Enter your site License Key from your magepulse.com account."
 "Public Key","Public Key"
-"This Public Key needs to be added to domainname.com so that we can decrypt your data.","This Public Key needs to be added to domainname.com so that we can decrypt your data."
+"This Public Key needs to be added to your magepulse.com account so that we can decrypt your data.","This Public Key needs to be added to your magepulse.com account so that we can decrypt your data."
