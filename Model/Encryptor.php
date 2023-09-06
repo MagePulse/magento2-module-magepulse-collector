@@ -52,7 +52,7 @@ class Encryptor
     {
         $key = $this->generateKey();
         $nonce = $this->generateNonce();
-        $cipherText = sodium_crypto_secretbox($message, $nonce, $key);
+        $cipherText = sodium_crypto_box($message, $nonce, $key);
         sodium_memzero($key);
         sodium_memzero($message);
 
