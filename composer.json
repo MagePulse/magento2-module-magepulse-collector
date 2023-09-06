@@ -2,6 +2,7 @@
     "name": "magepulse/magento2-module-collector",
     "description": "Magento 2 Plugin to send data to MagePulse.",
     "type": "magento2-module",
+    "version": "v0.0.1",
     "authors": [
         {
             "name": "Clive Walkden",
