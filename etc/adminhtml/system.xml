@@ -44,18 +44,18 @@
                         <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
-                        <![CDATA[Enter your site License Key from your magepulse.com account.]]>
+                        <![CDATA[Enter your License Key from your magepulse.com account.]]>
                     </comment>
                 </field>
                 <field id="public_key" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1">
-                    <label>Public Key</label>
-                    <attribute type="disabled" default="0">1</attribute>
+                    <label>Magento Public Key</label>
                     <config_path>magepulse_collector/keys/public_key</config_path>
+                    <frontend_model>MagePulse\Core\Block\System\Config\Form\Field\Disable</frontend_model>
                     <depends>
                         <field id="magepulse_collector/general/enabled">1</field>
                     </depends>
                     <comment>
-                        <![CDATA[This Public Key needs to be added to your magepulse.com account so that we can decrypt your data.]]>
+                        <![CDATA[This Magento Public Key needs to be added to your magepulse.com account so that we can decrypt your data.]]>
                     </comment>
                 </field>
             </group>
