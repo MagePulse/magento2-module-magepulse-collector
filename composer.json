@@ -18,7 +18,7 @@
     "license": "proprietary",
     "require": {
         "magento/framework": "*",
-        "magepulse/magento2-module-core": "dev-development",
+        "magepulse/magento2-module-core": "^1.1",
         "ext-sodium": "*"
     },
     "autoload": {
