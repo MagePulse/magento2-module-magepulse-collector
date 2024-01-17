@@ -1,32 +1,32 @@
 {
-    "name": "magepulse/magento2-module-collector",
-    "description": "Magento 2 Plugin to send data to MagePulse.",
-    "type": "magento2-module",
-    "version": "v0.0.1",
-    "authors": [
-        {
-            "name": "Clive Walkden",
-            "email": "clive@magepulse.com",
-            "homepage": "https://magepulse.com",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "email": "support@magepulse.com",
-        "source": "https://github.com/magepulse/magento2-module-magepulse-core"
-    },
-    "license": "proprietary",
-    "require": {
-        "magento/framework": "*",
-        "magepulse/magento2-module-core": "^1.1",
-        "ext-sodium": "*"
-    },
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "MagePulse\\Collector\\": ""
-        }
+  "name": "magepulse/magento2-module-collector",
+  "description": "Magento 2 Plugin to send data to MagePulse.",
+  "type": "magento2-module",
+  "version": "0.0.2",
+  "authors": [
+    {
+      "name": "Clive Walkden",
+      "email": "clive@magepulse.com",
+      "homepage": "https://magepulse.com",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "email": "support@magepulse.com",
+    "source": "https://github.com/magepulse/magento2-module-magepulse-core"
+  },
+  "license": "proprietary",
+  "require": {
+    "magento/framework": "*",
+    "magepulse/magento2-module-core": "^1.1",
+    "ext-sodium": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MagePulse\\Collector\\": ""
+    }
+  }
 }
