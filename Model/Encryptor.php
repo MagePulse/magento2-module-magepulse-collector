@@ -79,7 +79,7 @@ class Encryptor
      *
      * @throws Exception
      */
-    private function generateNonce(): bool|string
+    private function generateNonce(): string
     {
         return random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
     }
