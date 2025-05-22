@@ -26,12 +26,12 @@ jobs:
         options: -e="discovery.type=single-node" --health-cmd="curl http://localhost:9200/_cluster/health" --health-interval=10s --health-timeout=5s --health-retries=10
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           path: ${{ env.MODULE }}
 
       - name: 'Install fresh Magento instance'
-        uses: MAD-I-T/magento-actions@v3.22
+        uses: clivewalkden/magento-actions/action.yml@main
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -41,7 +41,7 @@ jobs:
 
       - name: 'Launch Magento 2 Unit Test'
         if: always()
-        uses: MAD-I-T/magento-actions@v3.22
+        uses: clivewalkden/magento-actions/action.yml@main
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -51,7 +51,7 @@ jobs:
 
       - name: 'phpstan'
         if: always()
-        uses: MAD-I-T/magento-actions@v3.22
+        uses: clivewalkden/magento-actions/action.yml@main
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -60,7 +60,7 @@ jobs:
 
       - name: 'Mess Detector'
         if: always()
-        uses: MAD-I-T/magento-actions@v3.22
+        uses: clivewalkden/magento-actions/action.yml@main
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -69,7 +69,7 @@ jobs:
 
       - name: 'Magento coding standard checking'
         if: always()
-        uses: MAD-I-T/magento-actions@v3.22
+        uses: clivewalkden/magento-actions/action.yml@main
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:

@@ -20,6 +20,7 @@ declare(strict_types=1);
 
 namespace MagePulse\Collector\Model\Collectors;
 
+use Magento\Framework\Module\Dir\Reader;
 use Magento\Framework\Module\FullModuleList;
 use Magento\Framework\Module\Manager as ModuleManager;
 use Magento\Framework\Module\ModuleListInterface;
@@ -31,17 +32,20 @@ class PluginModel implements CollectorInterface
     private FullModuleList $fullModuleList;
     private ModuleManager $moduleManager;
     private ModuleMetaInfo $moduleMetaInfo;
+    private Reader $moduleDirReader;
 
     public function __construct(
         FullModuleList $fullModuleList,
         ModuleListInterface $moduleList,
         ModuleManager $moduleManager,
-        ModuleMetaInfo $moduleMetaInfo
+        ModuleMetaInfo $moduleMetaInfo,
+        Reader $moduleDirReader
     ) {
         $this->fullModuleList = $fullModuleList;
         $this->moduleList = $moduleList;
         $this->moduleManager = $moduleManager;
         $this->moduleMetaInfo = $moduleMetaInfo;
+        $this->moduleDirReader = $moduleDirReader;
     }
 
     public function getData(): array
@@ -57,18 +61,41 @@ class PluginModel implements CollectorInterface
     {
         $modules = [];
         foreach ($this->fullModuleList->getAll() as $module) {
+            $moduleName = $module['name'];
+            $composerName = $this->getComposerName($moduleName);
+
             $modules[] = [
-                'name' => $module['name'],
-                'composer_version' => $this->moduleMetaInfo->getModuleMeta($module['name'])['version'] ?? '0.0.0',
-                'module_version' => $this->getVersion($module['name']),
-                'enabled' => $this->getStatus($module['name']),
-                'license' => $this->moduleMetaInfo->getModuleMeta($module['name'])['license'] ?? 'N/A',
-//                'raw' => $this->moduleMetaInfo->getModuleMeta($module['name']),
-                'support' => $this->moduleMetaInfo->getModuleMeta($module['name'])['support'] ?? 'N/A',
+                'name' => $moduleName,
+                'composer_name' => $composerName,
+                'composer_version' => $this->moduleMetaInfo->getModuleMeta($moduleName)['version'] ?? '0.0.0',
+                'module_version' => $this->getVersion($moduleName),
+                'enabled' => $this->getStatus($moduleName),
+                'license' => $this->moduleMetaInfo->getModuleMeta($moduleName)['license'] ?? 'N/A',
+                'support' => $this->moduleMetaInfo->getModuleMeta($moduleName)['support'] ?? 'N/A',
             ];
         }
 
         return $modules;
+    }
+
+    /**
+     * Get the composer name of a module
+     * @param string $moduleName
+     * @return string
+     */
+    protected function getComposerName(string $moduleName): string
+    {
+        try {
+            $dir = $this->moduleDirReader->getModuleDir('', $moduleName);
+            $composerJson = $dir . '/composer.json';
+            if (file_exists($composerJson)) {
+                $data = json_decode(file_get_contents($composerJson), true);
+                return $data['name'] ?? 'N/A';
+            }
+        } catch (\Exception $e) {
+            // Handle exception or log
+        }
+        return 'N/A';
     }
 
     /**

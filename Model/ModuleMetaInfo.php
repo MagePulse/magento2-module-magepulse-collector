@@ -43,9 +43,9 @@ class ModuleMetaInfo
      * Retrieve the module meta info
      *
      * @param string $moduleCode
-     * @return mixed
+     * @return array|string
      */
-    public function getModuleMeta(string $moduleCode): mixed
+    public function getModuleMeta(string $moduleCode)
     {
         if (!isset($this->moduleMeta[$moduleCode])) {
             $this->moduleMeta[$moduleCode] = '';
