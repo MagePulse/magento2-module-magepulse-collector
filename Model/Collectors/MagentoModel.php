@@ -19,14 +19,20 @@
 namespace MagePulse\Collector\Model\Collectors;
 
 use Magento\Framework\App\ProductMetadataInterface;
+use Magento\Framework\App\State;
 
 class MagentoModel implements CollectorInterface
 {
     private ProductMetadataInterface $metaData;
+    private State $state;
 
-    public function __construct(ProductMetadataInterface $metadata)
+    public function __construct(
+        ProductMetadataInterface $metadata,
+        State                    $state
+    )
     {
         $this->metaData = $metadata;
+        $this->state = $state;
     }
 
     public function getData(): array
@@ -35,6 +41,7 @@ class MagentoModel implements CollectorInterface
             'Magento Version' => $this->metaData->getVersion(),
             'Magento Edition' => $this->metaData->getEdition(),
             'Magento Name' => $this->metaData->getName(),
+            'Mode' => $this->state->getMode(),
             'PHP Version' => phpversion()
         ];
     }
