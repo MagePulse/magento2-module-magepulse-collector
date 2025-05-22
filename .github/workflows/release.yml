@@ -20,6 +20,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           version-file: './composer.json'
           tag-prefix: 'v'
+          create-summary: 'true'
 
       - name: create release
         uses: actions/create-release@v1
