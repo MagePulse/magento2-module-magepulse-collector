@@ -38,6 +38,7 @@ jobs:
           process: 'install-magento'
           magento_version: '2.4.6-p1'
           no_push: 1 ## add this arg to not push to the repo ideal for quick test on specific version
+          composer_require: 'magepulse/magento2-module-core'
 
       - name: 'Launch Magento 2 Unit Test'
         if: always()
