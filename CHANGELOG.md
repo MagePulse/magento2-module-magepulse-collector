@@ -1,4 +1,13 @@
-## 0.0.3 (2024-04-19)
+## [0.0.4](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.3...v0.0.4) (2025-05-22)
+
+
+### Bug Fixes
+
+* Update action versions in workflows and enhance module data retrieval ([1ba3000](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/1ba3000828d0a440eb5b1e9fac920d758f4b6ae6))
+
+
+
+## [0.0.3](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/78b95e59fc91f5d63f2eb2a7585926ea963f48a4...v0.0.3) (2024-04-19)
 
 
 ### Bug Fixes
