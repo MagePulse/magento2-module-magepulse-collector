@@ -46,8 +46,8 @@ class CollectorPool
      */
     private function checkCollectors($collectors): void
     {
-        foreach ($collectors as $groupName => $groupCollectors) {
-            foreach ($groupCollectors as $collectorName => $collector) {
+        foreach ($collectors as $groupCollectors) {
+            foreach ($groupCollectors as $collector) {
                 if (!$collector instanceof CollectorInterface) {
                     throw new \InvalidArgumentException(
                         sprintf(
