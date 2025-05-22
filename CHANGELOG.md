@@ -1,3 +1,13 @@
+## [0.0.5](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.4...v0.0.5) (2025-05-22)
+
+
+### Bug Fixes
+
+* Add module sequence dependency for MagePulse_Core in module.xml ([8ead4df](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/8ead4df711a2d7cbcf543c933a507a343f365244))
+* Added missing application state to MagentoModel Collector. ([f4b77e6](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/f4b77e65cb331ae9acffc300e618eb5d3b793e9d))
+
+
+
 ## [0.0.4](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.3...v0.0.4) (2025-05-22)
 
 
