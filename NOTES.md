@@ -14,5 +14,5 @@ Need to document the installation and configuration process
     4. Create the release on GitHub.
 5. Pull the main branch back down `git pull`.
 6. Merge the changes to the `development` branch `git checkout development && git merge main --no-ff` (make sure to
-   add [skip ci] to the commit message.
+   add [skip ci] to the commit message).
 7. Push the changes to the `development` branch `git push origin development`.
