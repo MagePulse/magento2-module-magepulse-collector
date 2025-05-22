@@ -21,11 +21,11 @@ namespace MagePulse\Collector\Controller\Retrieve;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Exception\NotFoundException;
-use SodiumException;
 use MagePulse\Collector\Model\Collector;
 use MagePulse\Collector\Model\CollectorPool;
 use MagePulse\Collector\Model\ConfigProvider;
 use MagePulse\Collector\Model\Encryptor;
+use SodiumException;
 
 class Index implements HttpGetActionInterface
 {

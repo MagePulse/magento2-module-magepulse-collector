@@ -25,9 +25,9 @@ use Magento\Framework\Encryption\EncryptorInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
-use SodiumException;
 use MagePulse\Collector\Model\ConfigProvider;
 use MagePulse\Collector\Service\Key;
+use SodiumException;
 
 /**
  * Patch is mechanism, that allows to do atomic upgrade data changes
