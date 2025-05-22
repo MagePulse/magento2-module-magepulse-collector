@@ -31,7 +31,7 @@ jobs:
           path: ${{ env.MODULE }}
 
       - name: 'Install fresh Magento instance'
-        uses: clivewalkden/magento-actions/action.yml@main
+        uses: clivewalkden/magento-actions/action.yml@master
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -41,7 +41,7 @@ jobs:
 
       - name: 'Launch Magento 2 Unit Test'
         if: always()
-        uses: clivewalkden/magento-actions/action.yml@main
+        uses: clivewalkden/magento-actions/action.yml@master
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -51,7 +51,7 @@ jobs:
 
       - name: 'phpstan'
         if: always()
-        uses: clivewalkden/magento-actions/action.yml@main
+        uses: clivewalkden/magento-actions/action.yml@master
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -60,7 +60,7 @@ jobs:
 
       - name: 'Mess Detector'
         if: always()
-        uses: clivewalkden/magento-actions/action.yml@main
+        uses: clivewalkden/magento-actions/action.yml@master
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
@@ -69,7 +69,7 @@ jobs:
 
       - name: 'Magento coding standard checking'
         if: always()
-        uses: clivewalkden/magento-actions/action.yml@main
+        uses: clivewalkden/magento-actions/action.yml@master
         env:
           COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
         with:
