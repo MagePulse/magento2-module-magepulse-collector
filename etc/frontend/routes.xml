@@ -19,6 +19,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
+        <!-- Main data collection route (kept as the single frontName) -->
         <route id="magepulse_collector" frontName="magepulse_collector">
             <module name="MagePulse_Collector"/>
         </route>
