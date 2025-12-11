@@ -20,20 +20,18 @@ declare(strict_types=1);
 
 namespace MagePulse\Collector\Controller\Ping;
 
-use Magento\Framework\App\Action\Action;
-use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\RawFactory;
 
 /**
  * Health-check endpoint at /magepulse_collector/ping/index
  */
-class Index extends Action
+class Index implements HttpGetActionInterface
 {
     private RawFactory $resultRawFactory;
 
-    public function __construct(Context $context, RawFactory $resultRawFactory)
+    public function __construct(RawFactory $resultRawFactory)
     {
-        parent::__construct($context);
         $this->resultRawFactory = $resultRawFactory;
     }
 
@@ -48,4 +46,3 @@ class Index extends Action
         return $response;
     }
 }
-
