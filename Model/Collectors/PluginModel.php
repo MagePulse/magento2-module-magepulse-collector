@@ -25,6 +25,7 @@ use Magento\Framework\Module\FullModuleList;
 use Magento\Framework\Module\Manager as ModuleManager;
 use Magento\Framework\Module\ModuleListInterface;
 use MagePulse\Collector\Model\ModuleMetaInfo;
+use Psr\Log\LoggerInterface;
 
 class PluginModel implements CollectorInterface
 {
@@ -33,19 +34,22 @@ class PluginModel implements CollectorInterface
     private ModuleManager $moduleManager;
     private ModuleMetaInfo $moduleMetaInfo;
     private Reader $moduleDirReader;
+    private LoggerInterface $logger;
 
     public function __construct(
         FullModuleList $fullModuleList,
         ModuleListInterface $moduleList,
         ModuleManager $moduleManager,
         ModuleMetaInfo $moduleMetaInfo,
-        Reader $moduleDirReader
+        Reader $moduleDirReader,
+        LoggerInterface $logger
     ) {
         $this->fullModuleList = $fullModuleList;
         $this->moduleList = $moduleList;
         $this->moduleManager = $moduleManager;
         $this->moduleMetaInfo = $moduleMetaInfo;
         $this->moduleDirReader = $moduleDirReader;
+        $this->logger = $logger;
     }
 
     public function getData(): array
@@ -93,7 +97,7 @@ class PluginModel implements CollectorInterface
                 return $data['name'] ?? 'N/A';
             }
         } catch (\Exception $e) {
-            // Handle exception or log
+            $this->logger->error('MagePulse Collector: failed to read composer.json for ' . $moduleName, ['exception' => $e]);
         }
         return 'N/A';
     }
