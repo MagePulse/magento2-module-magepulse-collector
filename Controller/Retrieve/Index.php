@@ -62,6 +62,12 @@ class Index implements HttpGetActionInterface
 
         $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
 
+        if (!$this->configProvider->isConfigured()) {
+            $result->setData(['error' => true, 'message' => 'Collector configuration is incomplete. Please check your MagePulse settings.']);
+            $result->setHttpResponseCode(500);
+            return $result;
+        }
+
         try {
             $time_start = microtime(true);
             $data = $this->collectorPool->collect(CollectorPool::DEFAULT_SERVICE_GROUP);

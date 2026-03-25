@@ -63,4 +63,13 @@ class ConfigProvider extends ConfigProviderAbstract
     {
         return $this->getValue(self::PUBLIC_KEY, $storeId);
     }
+
+    public function isConfigured(): bool
+    {
+        try {
+            return !empty($this->getSiteLicense()) && !empty($this->getPrivateKey());
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
 }
