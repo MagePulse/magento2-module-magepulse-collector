@@ -24,6 +24,11 @@
                 <item name="mainGroup" xsi:type="array">
                     <item name="system" xsi:type="object">MagePulse\Collector\Model\Collectors\MagentoModel</item>
                     <item name="modules" xsi:type="object">MagePulse\Collector\Model\Collectors\PluginModel</item>
+                    <item name="admin" xsi:type="object">MagePulse\Collector\Model\Collectors\AdminModel</item>
+                    <item name="security" xsi:type="object">MagePulse\Collector\Model\Collectors\SecurityModel</item>
+                    <item name="cache" xsi:type="object">MagePulse\Collector\Model\Collectors\CacheModel</item>
+                    <item name="cron" xsi:type="object">MagePulse\Collector\Model\Collectors\CronModel</item>
+                    <item name="indexers" xsi:type="object">MagePulse\Collector\Model\Collectors\IndexerModel</item>
                 </item>
             </argument>
         </arguments>
