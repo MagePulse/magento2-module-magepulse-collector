@@ -1,0 +1,130 @@
+{
+    "system": {
+        "Magento Version": "2.4.6-p8",
+        "Magento Edition": "Community",
+        "Magento Name": "Magento",
+        "Mode": "production",
+        "PHP Version": "8.2.18"
+    },
+    "modules": [
+        {
+            "name": "Magento_Store",
+            "composer_name": "magento/module-store",
+            "composer_version": "102.0.0",
+            "module_version": "2.0.0",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": "N/A"
+        },
+        {
+            "name": "Magento_Catalog",
+            "composer_name": "magento/module-catalog",
+            "composer_version": "104.0.0",
+            "module_version": "103.0.5",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": "N/A"
+        },
+        {
+            "name": "Magento_TwoFactorAuth",
+            "composer_name": "magento/module-two-factor-auth",
+            "composer_version": "1.1.4",
+            "module_version": "1.1.4",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": "N/A"
+        },
+        {
+            "name": "MagePulse_Core",
+            "composer_name": "magepulse/magento2-module-core",
+            "composer_version": "1.2.0",
+            "module_version": "1.2.0",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": {
+                "email": "support@magepulse.com",
+                "url": "https://magepulse.com/support"
+            }
+        },
+        {
+            "name": "MagePulse_Collector",
+            "composer_name": "magepulse/magento2-module-collector",
+            "composer_version": "0.1.0",
+            "module_version": "0.1.0",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": {
+                "email": "support@magepulse.com",
+                "url": "https://magepulse.com/support"
+            }
+        },
+        {
+            "name": "Amasty_Base",
+            "composer_name": "amasty/module-base",
+            "composer_version": "1.18.6",
+            "module_version": "1.18.6",
+            "enabled": "Enabled",
+            "license": "proprietary",
+            "support": {
+                "url": "https://amasty.com/contacts/"
+            }
+        },
+        {
+            "name": "Dotdigitalgroup_Email",
+            "composer_name": "dotdigital/dotdigital-magento2-extension",
+            "composer_version": "4.19.0",
+            "module_version": "4.19.0",
+            "enabled": "Disabled",
+            "license": "OSL-3.0",
+            "support": "N/A"
+        }
+    ],
+    "admin": {
+        "admin_path": "admin_abc123"
+    },
+    "security": {
+        "two_factor_auth": {
+            "module_installed": true,
+            "enabled": true
+        }
+    },
+    "cache": {
+        "full_page_cache": {
+            "enabled": true,
+            "type": "Varnish"
+        },
+        "cache_types": [
+            { "id": "config",                  "label": "Configuration",             "status": "enabled" },
+            { "id": "layout",                  "label": "Layouts",                   "status": "enabled" },
+            { "id": "block_html",              "label": "Blocks HTML output",        "status": "enabled" },
+            { "id": "collections",             "label": "Collections Data",          "status": "enabled" },
+            { "id": "reflection",              "label": "Reflection Data",           "status": "enabled" },
+            { "id": "db_ddl",                  "label": "Database DDL operations",   "status": "enabled" },
+            { "id": "compiled_config",         "label": "Compiled Config",           "status": "enabled" },
+            { "id": "eav",                     "label": "EAV types and attributes",  "status": "enabled" },
+            { "id": "customer_notification",   "label": "Customer Notification",     "status": "enabled" },
+            { "id": "config_integration",      "label": "Integrations Configuration","status": "enabled" },
+            { "id": "config_integration_api",  "label": "Integrations API config",   "status": "enabled" },
+            { "id": "full_page",               "label": "Page Cache",                "status": "enabled" },
+            { "id": "config_webservice",       "label": "Web Services Configuration","status": "enabled" },
+            { "id": "translate",               "label": "Translations",              "status": "disabled" }
+        ]
+    },
+    "cron": {
+        "last_successful_run": "2026-03-25 14:47:03",
+        "last_error": "2026-03-24 09:12:44",
+        "running_recently": true
+    },
+    "indexers": [
+        { "id": "design_config_grid",       "title": "Design Config Grid",              "status": "valid",   "needs_attention": false },
+        { "id": "customer_grid",            "title": "Customer Grid",                   "status": "valid",   "needs_attention": false },
+        { "id": "catalog_category_product", "title": "Category Products",               "status": "valid",   "needs_attention": false },
+        { "id": "catalog_product_category", "title": "Product Categories",              "status": "invalid", "needs_attention": true  },
+        { "id": "catalogrule_rule",         "title": "Catalog Rule Product",            "status": "valid",   "needs_attention": false },
+        { "id": "catalog_product_attribute","title": "Product EAV",                     "status": "valid",   "needs_attention": false },
+        { "id": "inventory",                "title": "Inventory",                       "status": "valid",   "needs_attention": false },
+        { "id": "catalogrule_product",      "title": "Catalog Product Rule",            "status": "working", "needs_attention": true  },
+        { "id": "catalogsearch_fulltext",   "title": "Catalog Search",                  "status": "valid",   "needs_attention": false },
+        { "id": "catalog_product_price",    "title": "Product Price",                   "status": "valid",   "needs_attention": false }
+    ]
+}
