@@ -37,7 +37,10 @@ class Key
      */
     public function getPublicKey(): string
     {
-        return sodium_bin2hex(sodium_crypto_box_publickey($this->keyPair));
+        $publicKey = sodium_crypto_box_publickey($this->keyPair);
+        $hex = sodium_bin2hex($publicKey);
+        sodium_memzero($publicKey);
+        return $hex;
     }
 
     /**
@@ -45,6 +48,16 @@ class Key
      */
     public function getPrivateKey(): string
     {
-        return sodium_bin2hex(sodium_crypto_box_secretkey($this->keyPair));
+        $privateKey = sodium_crypto_box_secretkey($this->keyPair);
+        $hex = sodium_bin2hex($privateKey);
+        sodium_memzero($privateKey);
+        return $hex;
+    }
+
+    public function __destruct()
+    {
+        if (isset($this->keyPair)) {
+            sodium_memzero($this->keyPair);
+        }
     }
 }

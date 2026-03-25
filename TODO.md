@@ -17,10 +17,6 @@ Items are removed from this file once completed.
   abuse (DoS, scraping). Implement rate limiting or rely on server-level controls and document
   the expectation.
 
-- [ ] **Key material not zeroed in `Service/Key.php`** — `$this->keyPair` is stored in an
-  object property and never cleared with `sodium_memzero()`. Contrast with `Encryptor.php`
-  which correctly zeros keys after use.
-  _Service/Key.php:30-49_
 
 ### Medium
 
