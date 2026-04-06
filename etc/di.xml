@@ -23,12 +23,26 @@
             <argument name="collectors" xsi:type="array">
                 <item name="mainGroup" xsi:type="array">
                     <item name="system" xsi:type="object">MagePulse\Collector\Model\Collectors\MagentoModel</item>
-                    <item name="modules" xsi:type="object">MagePulse\Collector\Model\Collectors\PluginModel</item>
                     <item name="admin" xsi:type="object">MagePulse\Collector\Model\Collectors\AdminModel</item>
                     <item name="security" xsi:type="object">MagePulse\Collector\Model\Collectors\SecurityModel</item>
                     <item name="cache" xsi:type="object">MagePulse\Collector\Model\Collectors\CacheModel</item>
                     <item name="cron" xsi:type="object">MagePulse\Collector\Model\Collectors\CronModel</item>
                     <item name="indexers" xsi:type="object">MagePulse\Collector\Model\Collectors\IndexerModel</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Register Collector with Core's ModuleRegistry for the admin Modules page -->
+    <type name="MagePulse\Core\Model\ModuleRegistry">
+        <arguments>
+            <argument name="modules" xsi:type="array">
+                <item name="magepulse/magento2-module-collector" xsi:type="array">
+                    <item name="composer_package" xsi:type="string">magepulse/magento2-module-collector</item>
+                    <item name="module_name" xsi:type="string">MagePulse_Collector</item>
+                    <item name="name" xsi:type="string">MagePulse Collector</item>
+                    <item name="description" xsi:type="string">Collects Magento system, module, and health data and transmits it securely to MagePulse.</item>
+                    <item name="version" xsi:type="string">0.0.5</item>
                 </item>
             </argument>
         </arguments>

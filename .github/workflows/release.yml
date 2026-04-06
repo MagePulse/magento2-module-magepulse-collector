@@ -21,6 +21,7 @@ jobs:
           version-file: './composer.json'
           tag-prefix: 'v'
           create-summary: 'true'
+          pre-commit: 'scripts/update-module-xml.cjs'
 
       - name: create release
         uses: actions/create-release@v1
