@@ -16,9 +16,15 @@
     "source": "https://github.com/magepulse/magento2-module-magepulse-core"
   },
   "license": "proprietary",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/MagePulse/magento2-module-magepulse-core"
+    }
+  ],
   "require": {
     "magento/framework": "*",
-    "magepulse/magento2-module-core": "^1.1",
+    "magepulse/magento2-module-core": "dev-feature/split-out-collector-modules",
     "ext-sodium": "*"
   },
   "autoload": {
