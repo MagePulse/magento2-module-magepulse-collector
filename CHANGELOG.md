@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.1.0...v0.1.1) (2026-04-11)
+
+
+### Bug Fixes
+
+* Update magepulse/magento2-module-core dependency to allow any version ([98cab0f](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/98cab0f84062088dbb3a98389eb2fed78348612b))
+
+
+
 # [0.1.0](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.5...v0.1.0) (2026-04-11)
 
 
