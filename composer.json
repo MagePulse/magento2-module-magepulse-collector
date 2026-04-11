@@ -24,7 +24,7 @@
   ],
   "require": {
     "magento/framework": "*",
-    "magepulse/magento2-module-core": "dev-feature/split-out-collector-modules",
+    "magepulse/magento2-module-core": "*",
     "ext-sodium": "*"
   },
   "autoload": {
