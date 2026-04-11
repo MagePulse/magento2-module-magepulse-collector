@@ -1,3 +1,20 @@
+# [0.1.0](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.5...v0.1.0) (2026-04-11)
+
+
+### Bug Fixes
+
+* Add configuration check in Index class and error handling in response ([d926582](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/d926582b710d6d17f548cb40aceeb805c346c452))
+* Add logging for exception handling in PluginModel ([ec42672](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/ec426725621010ff4946348eab3bd516f6cd9379))
+* Enhance key management by zeroing sensitive data in Key class ([f29df9d](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/f29df9d931e1b1fd6d838e9d612604a0276c1092))
+
+
+### Features
+
+* Add additional data collectors for admin, cache, cron, and security ([e20513f](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/e20513f5a12e1199787a642a16a7ced6a20e3f19))
+* Add health-check endpoint for MagePulse collector ([7aa112b](https://github.com/MagePulse/magento2-module-magepulse-collector/commit/7aa112bec27bf4208d19ca3e98dc05acbffdf004))
+
+
+
 ## [0.0.5](https://github.com/MagePulse/magento2-module-magepulse-collector/compare/v0.0.4...v0.0.5) (2025-05-22)
 
 
