@@ -81,6 +81,6 @@ class Encryptor
      */
     private function generateNonce(): string
     {
-        return random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+        return random_bytes(SODIUM_CRYPTO_BOX_NONCEBYTES);
     }
 }
