@@ -94,20 +94,6 @@ Items are removed from this file once completed.
 
 ---
 
-## Testing
-
-- [ ] **No unit tests exist** — the module has zero test coverage despite handling
-  security-sensitive operations (encryption, key management, data collection).
-  Priority classes to test:
-  - `Model/Encryptor.php` — encrypt/decrypt round-trip, nonce uniqueness, memory zeroing
-  - `Model/ConfigProvider.php` — enabled/disabled state, null site license handling
-  - `Model/Collectors/MagentoModel.php` — data shape validation
-  - `Model/Collectors/PluginModel.php` — missing/malformed composer.json handling
-  - `Model/CollectorPool.php` — invalid collector rejection
-  - `Service/Key.php` — keypair generation and hex encoding
-
----
-
 ## Magento 2 Best Practices
 
 - [ ] **Unconstrained `magento/framework` dependency** — `"*"` should be replaced with a
