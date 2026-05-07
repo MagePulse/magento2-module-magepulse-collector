@@ -72,8 +72,11 @@ class Index implements HttpGetActionInterface
             $time_start = microtime(true);
             $data = $this->collectorPool->collect(CollectorPool::DEFAULT_SERVICE_GROUP);
             $time_end = microtime(true);
-            $result->setData(['error' => false, 'encryptedData' => $this->encryptor->encrypt(json_encode($data)), 'executionTime' => $time_end - $time_start]);
+            $result->setData(['error' => false, 'encryptedData' => $this->encryptor->encrypt(json_encode($data, JSON_THROW_ON_ERROR)), 'executionTime' => $time_end - $time_start]);
             $result->setHttpResponseCode(200);
+        } catch (\JsonException $e) {
+            $result->setData(['error' => true, 'message' => 'Failed to serialise collector data.']);
+            $result->setHttpResponseCode(500);
         } catch (SodiumException $e) {
             $result->setData(['error' => true, 'message' => $e->getMessage()]);
             $result->setHttpResponseCode(500);
